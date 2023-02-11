@@ -39,7 +39,8 @@ class List{
         this->head=NULL;
         this->iterator = this->head;
     }
-    void push(T value){//리스트 맨 앞에 새 요소 추가(head)
+    void push(T value){
+        //head가 가리키는 노드 앞에 새 노드 추가
         if(this->head==NULL){
             Node<T> *newNode = new Node<T>(value)*;
             tail = NULL;
@@ -50,6 +51,18 @@ class List{
         newNode->next = &this->head;
         &this->head->prev=newNode;
         this->head = newNode;
+    }
+    void pop(){
+        //head가 가리키는 노드 삭제
+    }
+    void insert(int index, T value){
+        //head에서 index 만큼 떨어진 노드 앞에 새 노드 추가
+    }
+    void remove(int index){
+        //head에서 index만큼 떨어진 노드 삭제 
+    }
+    T getdata(int index){
+        //head에서 index만큼 떨어진 노드의 값 반환
     }
 };
 //Global Variable
