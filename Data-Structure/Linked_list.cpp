@@ -14,7 +14,44 @@ using namespace std;
 template <typename T>
 
 //Class
-
+class Node{
+    public:
+        T value;
+        Node* next;
+        Node* prev;
+        Node(){
+            this->next=NULL;
+            this->prev=NULL;
+        }
+        Node(T val){
+            this->next=NULL;
+            this->prev=NULL;
+            this->value = val;
+        }
+};
+template <typename T>
+class List{
+    private:
+       Node<T> *head;
+       Node<T> *tail;
+    public:
+    List(void){
+        this->head=NULL;
+        this->iterator = this->head;
+    }
+    void insert(T value){
+        if(this->head==NULL){
+            Node<T> *newNode = new Node<T>(value)*;
+            tail = NULL;
+            this->head = newNode;
+            newNode->next = tail;
+        }
+        Node<T> *newNode = new Node<T>(value)*;
+        newNode->next = &this->head;
+        &this->head->prev=newNode;
+        this->head = newNode;
+    }
+};
 //Global Variable
 
 //Functions - Define
