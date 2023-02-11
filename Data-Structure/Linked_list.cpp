@@ -39,7 +39,7 @@ class List{
         this->head=NULL;
         this->iterator = this->head;
     }
-    void insert(T value){
+    void push(T value){//리스트 맨 앞에 새 요소 추가(head)
         if(this->head==NULL){
             Node<T> *newNode = new Node<T>(value)*;
             tail = NULL;
