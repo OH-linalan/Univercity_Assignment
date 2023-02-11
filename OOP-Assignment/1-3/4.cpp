@@ -15,10 +15,13 @@ Node는 H, 노드가 움직이기 4번째 전까지의 경로는 x로 출력한�
 //Namespace
 using namespace std;
 
+//Class
+
 //Global Variable
 
 //Functions - Define
-
+void command();
+void board();
 //Main
 int main () { 
     
@@ -26,3 +29,11 @@ int main () {
 }
 
 //Functions - Body
+void command(){
+    char cmd;
+    cout<<"command: ";
+    cin>>cmd;
+}
+void board(){
+
+}
