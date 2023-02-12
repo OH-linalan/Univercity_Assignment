@@ -37,11 +37,25 @@ class SLL{
         Node<T> *tail = new Node<T>*;
         this->head=tail;
     }
-    void push(T value){
+    void push(T values){
         //head가 가리키는 노드 앞에 새 노드 추가
+            Node<T> *newNode = new Node<T>*;
+            newNode->value = values;
+            newNode->next = &this->head;
+            this->head=newNode;
+            return;
     }
     void pop(){
         //head가 가리키는 노드 삭제
+        if(&this->head==NULL){
+            cout<<"error: list is empty!"<<endl;
+            return;
+        }
+        Node<T> *temp;
+        temp = &this->head;
+        this->head = &temp->next;
+        delete &temp;
+        return;
     }
     void insert(int index, T value){
         //head에서 index 만큼 떨어진 노드 앞에 새 노드 추가
