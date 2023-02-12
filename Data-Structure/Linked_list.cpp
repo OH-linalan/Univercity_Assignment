@@ -34,12 +34,12 @@ class SLL{
        Node<T> *head;
     public:
     SLL(void){
-        Node<T> *tail = new Node<T>*;
+        Node<T> *tail = new Node<T>;
         this->head=tail;
     }
     void push(T values){
         //head가 가리키는 노드 앞에 새 노드 추가
-            Node<T> *newNode = new Node<T>*;
+            Node<T> *newNode = new Node<T>;
             newNode->value = values;
             newNode->next = &this->head;
             this->head=newNode;
@@ -73,7 +73,13 @@ class SLL{
 
 //Main
 int main () { 
-    
+    SLL<int>newlist;
+    newlist.push(4);
+    newlist.pop();
+    newlist.push(3);
+    newlist.push(5);
+    newlist.push(123);
+    newlist.pop();
     return 0;
 }
 
