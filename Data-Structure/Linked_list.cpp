@@ -18,39 +18,27 @@ class Node{
     public:
         T value;
         Node* next;
-        Node* prev;
         Node(){
             this->next=NULL;
-            this->prev=NULL;
+            this->value=NULL;
         }
         Node(T val){
             this->next=NULL;
-            this->prev=NULL;
             this->value = val;
         }
 };
 template <typename T>
-class List{
+class SLL{
+    //단일 연결 리스트
     private:
        Node<T> *head;
-       Node<T> *tail;
     public:
-    List(void){
-        this->head=NULL;
-        this->iterator = this->head;
+    SLL(void){
+        Node<T> *tail = new Node<T>*;
+        this->head=tail;
     }
     void push(T value){
         //head가 가리키는 노드 앞에 새 노드 추가
-        if(this->head==NULL){
-            Node<T> *newNode = new Node<T>(value)*;
-            tail = NULL;
-            this->head = newNode;
-            newNode->next = tail;
-        }
-        Node<T> *newNode = new Node<T>(value)*;
-        newNode->next = &this->head;
-        &this->head->prev=newNode;
-        this->head = newNode;
     }
     void pop(){
         //head가 가리키는 노드 삭제
