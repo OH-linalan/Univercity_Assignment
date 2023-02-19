@@ -6,16 +6,16 @@
 ## Urls
 https://youtube.com/playlist?list=PL0I7nUseaZ57vs2piA_v-e6DYo1ySqXJu
 ## Language
-# C++ Coding Style Guide
-## Introduction
-#### This document provides guidelines for writing C++ code using the K&R method. The K&R style is a popular coding style for C and C++ that emphasizes readability and simplicity. The style is named after the authors of "The C Programming Language," Brian Kernighan and Dennis Ritchie.
+# C++ Coding Style Guide with Chatgpt
+## 소개
+### 이 문서는 K&R 방법을 사용하여 C++ 코드를 작성하는 데 필요한 지침을 제공합니다. K&R 스타일은 C 및 C++용 인기있는 코딩 스타일로 가독성과 간결함을 강조합니다. 이 스타일은 "The C Programming Language"의 저자인 브라이언 커니핸과 데니스 리치에서 이름을 따왔습니다.
 
-Naming Conventions
-Use descriptive names for variables, functions, and classes. Avoid single-letter variable names.
-Use camelCase for variable and function names.
-Use PascalCase for class names.
-Use UPPER_CASE for constants.
-Prefix private member variables with an underscore.
+#### 명명 규칙
+변수, 함수 및 클래스에 대한 설명적인 이름을 사용하십시오. 한 문자 변수 이름을 피하십시오.
+변수 및 함수 이름에는 camelCase를 사용하십시오.
+클래스 이름에는 PascalCase를 사용하십시오.
+상수에는 UPPER_CASE를 사용하십시오.
+비공개 멤버 변수의 경우 밑줄로 시작하는 접두사를 사용하십시오.
 ```cpp
 int numStudents;
 void calculateAverageScore();
@@ -24,9 +24,9 @@ const int MAX_SCORE = 100;
 private:
   int _grade;
 ```
-## Indentation
-Use 4 spaces for indentation.
-Use spaces instead of tabs.
+#### 들여쓰기
+들여쓰기에는 4개의 공백을 사용하십시오.
+탭 대신 공백을 사용하십시오.
 ```cpp
 if (condition) {
     // do something
@@ -34,9 +34,9 @@ if (condition) {
     // do something else
 }
 ```
-## Braces
-Place opening braces on the same line as the statement or declaration.
-Place closing braces on a new line.
+#### 중괄호
+중괄호는 문장이나 선언과 같은 줄에 여는 중괄호를 놓습니다.
+닫는 중괄호는 새 줄에 놓습니다.
 ```cpp
 if (condition) {
     // do something
@@ -44,9 +44,9 @@ if (condition) {
     // do something else
 }
 ```
-## Line Length
-Limit lines to 80 characters.
-Break long lines at logical points, such as after a comma.
+#### 줄 길이
+줄 길이는 80자로 제한하십시오.
+쉼표 다음과 같이 논리적인 지점에서 긴 줄을 나누십시오.
 ```cpp
 void displayStudentRecord(const StudentRecord& record, bool showDetails) {
     cout << "Name: " << record.getName()
@@ -59,10 +59,10 @@ void displayStudentRecord(const StudentRecord& record, bool showDetails) {
     cout << endl;
 }
 ```
-## Comments
-Use comments to explain the purpose and behavior of code.
-Place comments on a separate line above the code they describe.
-Use a blank line before and after a block of comments.
+#### 주석
+코드의 목적과 동작을 설명하기 위해 주석을 사용하십시오.
+설명하는 코드 위에 주석을 놓으십시오.
+주석 블록 전후에 빈 줄을 사용하십시오.
 ```cpp
 // This function calculates the average score of a list of scores.
 // It takes a vector of integers as input and returns a double value.
