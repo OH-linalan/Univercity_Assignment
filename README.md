@@ -16,8 +16,7 @@ Use camelCase for variable and function names.
 Use PascalCase for class names.
 Use UPPER_CASE for constants.
 Prefix private member variables with an underscore.
-```
-cpp
+```cpp
 int numStudents;
 void calculateAverageScore();
 class StudentRecord;
@@ -28,8 +27,7 @@ private:
 ## Indentation
 Use 4 spaces for indentation.
 Use spaces instead of tabs.
-```
-cpp
+```cpp
 if (condition) {
     // do something
 } else {
@@ -39,8 +37,7 @@ if (condition) {
 ## Braces
 Place opening braces on the same line as the statement or declaration.
 Place closing braces on a new line.
-```
-cpp
+```cpp
 if (condition) {
     // do something
 } else {
@@ -50,8 +47,7 @@ if (condition) {
 ## Line Length
 Limit lines to 80 characters.
 Break long lines at logical points, such as after a comma.
-```
-cpp
+```cpp
 void displayStudentRecord(const StudentRecord& record, bool showDetails) {
     cout << "Name: " << record.getName()
          << ", Age: " << record.getAge()
@@ -67,8 +63,7 @@ void displayStudentRecord(const StudentRecord& record, bool showDetails) {
 Use comments to explain the purpose and behavior of code.
 Place comments on a separate line above the code they describe.
 Use a blank line before and after a block of comments.
-```
-cpp
+```cpp
 // This function calculates the average score of a list of scores.
 // It takes a vector of integers as input and returns a double value.
 double calculateAverageScore(const vector<int>& scores) {
